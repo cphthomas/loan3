@@ -1,6 +1,6 @@
 var inputValues = {
     price: {
-        _value: 30000,
+        _value: 1200,
         set value(val) {
             this._value = parseFloat(val);
             var tiv = inputValues.trade_in_value.value;
@@ -18,15 +18,15 @@ var inputValues = {
         get value() {
             return this._value;
         },
-        min: -1000,
+        min: 0,
         max: 1000000,
         step: 10000,
         reset: function () {
-            this._value = 50000;
+            this._value = 1200;
         }
     },
     cash_down_payment: {
-        _value: 6000,
+        _value: 0,
         set value(val) {
             this._value = parseFloat(val);
             var sum = this._value + inputValues.trade_in_value.value;
@@ -43,7 +43,7 @@ var inputValues = {
         },
         step: 500,
         reset: function () {
-            this._value = 6000;
+            this._value = 0;
         }
     },
     trade_in_value: {
@@ -69,7 +69,7 @@ var inputValues = {
     },
     tax_rate: {
         min: 0,
-        max: 20,
+        max: 50,
         step: 0.1,
         _value: 0,
         get value() {
@@ -86,7 +86,7 @@ var inputValues = {
         min: 12,
         max: 84,
         step: 12,
-        _value: 60,
+        _value: 12,
         get value() {
             return parseFloat(this._value);
         },
@@ -94,14 +94,14 @@ var inputValues = {
             this._value = val;
         },
         reset: function () {
-            this._value = 60;
+            this._value = 12;
         }
     },
     apr: {
         min: 0,
         max: 30,
         step: 0.1,
-        _value: 2.5,
+        _value: 10,
         get value() {
             return parseFloat(this._value);
         },
@@ -109,7 +109,7 @@ var inputValues = {
             this._value = val;
         },
         reset: function () {
-            this._value = 2.5;
+            this._value = 10;
         }
     }
 };
