@@ -18,11 +18,11 @@ var inputValues = {
         get value() {
             return this._value;
         },
-        min: 0,
-        max: 500000,
-        step: 5000,
+        min: -1000,
+        max: 1000000,
+        step: 10000,
         reset: function () {
-            this._value = 30000;
+            this._value = 50000;
         }
     },
     cash_down_payment: {
